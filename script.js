@@ -6,15 +6,15 @@ console.log(accountNumber);
 var _dcq = _dcq || [];
 var _dcs = { account: accountNumber, debug: true };
 
-function() {
-    var dc = document.createElement('script');
-    dc.type = 'text/javascript';
-    dc.async = true;
-    dc.src = 'https://tag.getdrip.com/' + accountNumber + '.js';
-    console.log(dc.src);
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(dc, s);
-}();
+
+var dc = document.createElement('script');
+dc.type = 'text/javascript';
+dc.async = true;
+dc.src = 'https://tag.getdrip.com/' + accountNumber + '.js';
+console.log(dc.src);
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(dc, s);
+
 
 
 function handle_submit(event) { // 3
