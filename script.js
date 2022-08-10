@@ -11,6 +11,12 @@
       s.parentNode.insertBefore(dc, s);
   })();
 
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-753PQ20YNC');
 
 
 
