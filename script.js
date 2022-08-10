@@ -18,6 +18,8 @@
 
   gtag('config', 'G-753PQ20YNC');
 
+  gtag('event', 'visited page', {'method': 'Google'});
+
 
 
 
