@@ -22,7 +22,35 @@
   gtag('event', 'share', {'method': 'Google'});
 
 
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Authorization", "Basic e3thcGlUb2tlbn19Og==");
 
+var raw = JSON.stringify({
+  "subscribers": [
+    {
+      "email": "jacob.perry@drip.com",
+      "time_zone": "America/Los_Angeles",
+      "status": "active",
+      "tags": [
+        "22"
+      ],
+      "custom_fields": {}
+    }
+  ]
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://api.getdrip.com/v2/9967522/subscribers", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 
   function handle_submit(event) { // 3
       event.preventDefault(); // 4
