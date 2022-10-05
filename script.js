@@ -11,6 +11,13 @@
       s.parentNode.insertBefore(dc, s);
   })();
 
+  const client = require('drip-nodejs')(
+  {
+    token: YOUR_API_KEY,
+    accountId: YOUR_ACCOUNT_ID
+  }
+);
+
   window.dataLayer = window.dataLayer || [];
 
   function gtag() { dataLayer.push(arguments); }
