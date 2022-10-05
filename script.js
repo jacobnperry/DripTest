@@ -1,3 +1,48 @@
+  
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Authorization", "Basic e3thcGlUb2tlbn19Og==");
+
+var raw = JSON.stringify({
+  "subscribers": [
+    {
+      "email": "jacob.perry@drip.com",
+      "time_zone": "America/Los_Angeles",
+      "custom_fields": {
+        "subscribed": "true",
+        "first_name": "Pascal",
+        "last_name": "-",
+        "language": "en",
+        "country": "DE",
+        "created_date": "2019-06-13 03:18:24",
+        "subscribe_date": "2019-06-13 04:40:33"
+      }
+    }
+  ]
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://api.getdrip.com/v2/9967522/subscribers", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+
+
+
+
+
+
+
+
   var _dcq = _dcq || [];
   var _dcs = _dcs || {};
   _dcs.account = '9967522';
@@ -11,12 +56,7 @@
       s.parentNode.insertBefore(dc, s);
   })();
 
-  const client = require('drip-nodejs')(
-  {
-    token: YOUR_API_KEY,
-    accountId: YOUR_ACCOUNT_ID
-  }
-);
+
 
   window.dataLayer = window.dataLayer || [];
 
@@ -25,36 +65,34 @@
 
   gtag('config', 'G-753PQ20YNC');
 
-  gtag('event', 'visited page', {'method': 'Google'});
-  gtag('event', 'share', {'method': 'Google'});
+  gtag('event', 'visited page', { 'method': 'Google' });
+  gtag('event', 'share', { 'method': 'Google' });
 
 
-var settings = {
-  "url": "https://api.getdrip.com/v2/9967522/subscribers",
-  "method": "POST",
-  "timeout": 0,
-  "headers": {
-    "Content-Type": "application/json",
-    "Authorization": "Basic e3thcGlUb2tlbn19Og=="
-  },
-  "data": JSON.stringify({
-    "subscribers": [
-      {
-        "email": "jacob.perry@drip.com",
-        "time_zone": "America/Los_Angeles",
-        "status": "active",
-        "tags": [
-          "22"
-        ],
-        "custom_fields": {}
-      }
-    ]
-  }),
-};
+  var settings = {
+      "url": "https://api.getdrip.com/v2/9967522/subscribers",
+      "method": "POST",
+      "timeout": 0,
+      "headers": {
+          "Content-Type": "application/json",
+          "Authorization": "Basic e3thcGlUb2tlbn19Og=="
+      },
+      "data": JSON.stringify({
+          "subscribers": [{
+              "email": "jacob.perry@drip.com",
+              "time_zone": "America/Los_Angeles",
+              "status": "active",
+              "tags": [
+                  "22"
+              ],
+              "custom_fields": {}
+          }]
+      }),
+  };
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
+  $.ajax(settings).done(function(response) {
+      console.log(response);
+  });
 
   function handle_submit(event) { // 3
       event.preventDefault(); // 4
