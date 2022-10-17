@@ -14,7 +14,7 @@ async function fetchSub() {
     var requestOptions = {
         method: 'GET',
         mode: 'no-cors',
-        Authorization: 'Basic 0672dc522d3b6827e4065c2866b59022'
+        Authorization: 'Basic 0672dc522d3b6827e4065c2866b59022',
         redirect: 'follow'
     };
     var subs = await fetch('https://api.getdrip.com/v2/9967522/subscribers', requestOptions);
