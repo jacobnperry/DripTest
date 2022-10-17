@@ -7,9 +7,9 @@ var _dcq = _dcq || [];
 var _dcs = { account: accountNumber, debug: true };
 
 
-function fetchSub() {
+async function fetchSub() {
     var myHeaders = new Headers();
-    myHeaders.append('Authorization', 'Basic 0672dc522d3b6827e4065c2866b59022','Access-Control-Allow-Origin','*', 'Origin','jacobnperry.github.io');
+    myHeaders.append('Authorization', 'Basic 0672dc522d3b6827e4065c2866b59022','Access-Control-Allow-Origin','*', 'Origin','true');
     console.log(myHeaders.get('Authorization'));
     var requestOptions = {
         method: 'GET',
@@ -17,11 +17,9 @@ function fetchSub() {
         headers: myHeaders,
         redirect: 'follow'
     };
-    fetch('https://api.getdrip.com/v2/9967522/subscribers', requestOptions)
+    var subs = await fetch('https://api.getdrip.com/v2/9967522/subscribers', requestOptions);
 
-        .then(response => response.text())
-        .then(data => console.log(data));
-
+    console.log(subs.json());
 }
 
 
