@@ -5,7 +5,7 @@ var accountNumber = 9967522;
 console.log(accountNumber);
 var _dcq = _dcq || [];
 var _dcs = { account: accountNumber, debug: true };
-
+var tagged = false;
 
 
 window.sleeknoteSiteData || (window.sleeknoteSiteData = []);
@@ -15,7 +15,7 @@ let lastKnownScrollPosition = 0;
 document.addEventListener("scroll", (event) => {
     lastKnownScrollPosition = window.scrollY;
 
-    if (lastKnownScrollPosition > 20) {
+    if (lastKnownScrollPosition > 20 && !tagged) {
 
 
 
@@ -25,7 +25,6 @@ document.addEventListener("scroll", (event) => {
         siteData();
 
     }
-    ticking = true;
 });
 
 function siteData() {
@@ -33,6 +32,8 @@ function siteData() {
     window.sleeknoteSiteData.push({ 'startinAttribute': 'start' });
 
     console.log(window.sleeknoteSiteData);
+    tagged = true;
+
 }
 
 async function fetchSub() {
