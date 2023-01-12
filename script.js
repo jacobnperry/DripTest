@@ -7,9 +7,37 @@ var _dcq = _dcq || [];
 var _dcs = { account: accountNumber, debug: true };
 
 
+
+window.sleeknoteSiteData || (window.sleeknoteSiteData = []);
+
+let lastKnownScrollPosition = 0;
+
+document.addEventListener("scroll", (event) => {
+    lastKnownScrollPosition = window.scrollY;
+
+    if (lastKnownScrollPosition > 20) {
+
+
+
+
+        console.log("down" + lastKnownScrollPosition);
+
+        siteData();
+
+    }
+    ticking = true;
+});
+
+function siteData() {
+    console.log("sitedata function")
+    window.sleeknoteSiteData.push({ 'startinAttribute': 'start' });
+
+    console.log(window.sleeknoteSiteData);
+}
+
 async function fetchSub() {
     var myHeaders = new Headers();
-    myHeaders.append('Authorization', 'Basic 0672dc522d3b6827e4065c2866b59022','Access-Control-Allow-Origin','*', 'Origin','true');
+    myHeaders.append('Authorization', 'Basic 0672dc522d3b6827e4065c2866b59022', 'Access-Control-Allow-Origin', '*', 'Origin', 'true');
     console.log(myHeaders.get('Authorization'));
     var requestOptions = {
         method: 'GET',
@@ -60,5 +88,3 @@ function apiPost() {
     window._dcq.push(['track', 'Visited a page', { url: "window.location.href" }]);
 
 }
-
-window._dcq.push(['identify', { success: (resp) => console.log(resp) }]);

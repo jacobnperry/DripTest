@@ -2,7 +2,13 @@
 <html lang="en">
 
 <head>
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <script>
+
+    
+
+    </script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -69,6 +75,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="col-md">
                 <a href="https://www.getdrip.com/forms/475526222/submissions/new" data-drip-show-form="475526222">Show form</a>
+                <div><button id="sitedata">Log</button></div>
             </div>
         </div>
     </main>
@@ -105,96 +112,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Drip -->
     <!-- end Drip -->
 
+    
 
-<script type="text/javascript">
-
-        //jQuery(document).ready(function() {
-
-            //jQuery('body').addClass("on-mobile-device");
-
-        //});
-
-        jQuery(document).on('touchstart', function() {
-
-            jQuery('body').addClass("on-mobile-device");
-
-        });
-
-        jQuery(document).on('scroll', myScrollSpeedFunction);
-
-        //jQuery(document).on('beforeunload', myBackButtonFunction);
-        jQuery(window).on('popstate', function(event) {
-          if (jQuery('body').hasClass('on-mobile-device')) {
-                    //Your code here to display Exit Intent popup
-
-                    console.log("popstate triggered")
-          }
-        });
-
-        function myScrollSpeedFunction() {
-
-            if (jQuery('body').hasClass('on-mobile-device')) {
-
-                if (my_scroll() < -200) {
-
-                    //Your code here to display Exit Intent popup
-
-                    console.log("Scroll event logged")
-
-                }
-
-            }
-
-        }
-
-        var my_scroll = (function() { //Function that checks the speed of scrolling
-
-            var last_position, new_position, timer, delta, delay = 50;
-
-
-
-            function clear() {
-
-                last_position = null;
-
-                delta = 0;
-
-            }
-
-            clear();
-
-            return function() {
-
-                new_position = window.scrollY;
-
-                if (last_position != null) {
-
-                    delta = new_position - last_position;
-
-                }
-
-                last_position = new_position;
-
-                clearTimeout(timer);
-
-                timer = setTimeout(clear, delay);
-
-                return delta;
-
-            };
-
-        })();
-
-        function myBackButtonFunction() {
-
-            if (jQuery('body').hasClass('on-mobile-device')) {
-
-                console.log("back button function")
-            }
-
-        }
-
-    </script>
 </body>
 
 
