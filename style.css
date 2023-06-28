@@ -1,78 +1,47 @@
-.divide {
+.divide{
 
-    background-color: #ff59e1;
-    height: 5px;
+  background-color: #ff59e1;
+  height: 5px;
 }
 
-p {
-    text-align: center;
-    font: sans-serif;
+p{
+  text-align: center;
+  font: sans-serif;
 }
-
 h1 {
-    font: 2rem/1.5rem sans-serif;
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin: 2rem;
-
+  font: 2rem/1.5rem sans-serif; 
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin: 2rem;
+  
 }
 
 .col-md {
-    border: 1px solid;
+  border: 1px solid;
 
-    padding: 10px;
-    background-color: #ffffff;
+  padding:10px;
+  background-color: #ffffff;
 }
 
 h2 {
-    font-family: sans-serif;
-    font-size: 10vw;
-    text-align: center;
+  font-family: sans-serif;
+  font-size: 10vw;
+  text-align: center;
 }
 
-#drip-ef-827315238 {
-    font: .875rem/1.5rem sans-serif;
-    width: 100%;
-}
+  #drip-ef-827315238 { font: .875rem/1.5rem sans-serif; width: 100%; }
+  #drip-ef-827315238 h3 { font-size: 1.125rem; margin: 0 0 .375rem; }
+  #drip-ef-827315238 > div { margin-bottom: .75rem; }
+  #drip-ef-827315238 fieldset { border: none; margin: 0; padding: 0; }
+  #drip-ef-827315238 legend { margin: 0; padding: 0; }
+  #drip-ef-827315238 input[type="email"],
+  #drip-ef-827315238 input[type="number"],
+  #drip-ef-827315238 input[type="tel"],
+  #drip-ef-827315238 input[type="text"] { margin: 0; padding: .375rem .5625rem; width: 100%; }
+  #drip-ef-827315238 input[type="checkbox"],
+  #drip-ef-827315238 input[type="radio"] { margin: .1875rem .1875rem 0 0; padding: 0; }
+  #drip-ef-827315238 input[type="submit"] { margin: 0; padding: .375rem .5625rem; }
 
-#drip-ef-827315238 h3 {
-    font-size: 1.125rem;
-    margin: 0 0 .375rem;
-}
 
-#drip-ef-827315238>div {
-    margin-bottom: .75rem;
-}
-
-#drip-ef-827315238 fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-#drip-ef-827315238 legend {
-    margin: 0;
-    padding: 0;
-}
-
-#drip-ef-827315238 input[type="email"],
-#drip-ef-827315238 input[type="number"],
-#drip-ef-827315238 input[type="tel"],
-#drip-ef-827315238 input[type="text"] {
-    margin: 0;
-    padding: .375rem .5625rem;
-    width: 100%;
-}
-
-#drip-ef-827315238 input[type="checkbox"],
-#drip-ef-827315238 input[type="radio"] {
-    margin: .1875rem .1875rem 0 0;
-    padding: 0;
-}
-
-#drip-ef-827315238 input[type="submit"] {
-    margin: 0;
-    padding: .375rem .5625rem;
-}
