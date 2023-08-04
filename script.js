@@ -7,6 +7,11 @@ var _dcq = _dcq || [];
 var _dcs = { account: accountNumber, debug: true };
 
 
+
+window['DripOnsite.sitedata'] = [];
+window['DripOnsite.sitedata'].push({'attributeName': 1234});
+
+
 function subscriberGet() {
   var parser = new DOMParser();
   var obj;
